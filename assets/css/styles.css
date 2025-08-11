@@ -1,0 +1,18 @@
+*{
+    /* Đa phần dev sẽ dùng border-box, vì nó giúp dễ dàng hơn trong việc tính toán kích thước phần tử, 
+    width và height sẽ bao gồm cả nội dung (content), padding và border.
+    */
+    box-sizing: border-box;
+}
+
+html{
+    /* Điều chỉnh font-size: 62.5% thì chúng ta quy đổi 1rem = 10px, thuận tiện cho việc tính toán 
+    theo kích thước chuẩn
+    */
+    font-size: 62.5%;
+}
+
+/* khôi phục lại cỡ chữ mặc định theo rem */
+body{
+    font-size: 1.6rem;
+}
