@@ -1,0 +1,106 @@
+* {
+  /* Đa phần dev sẽ dùng border-box, vì nó giúp dễ dàng hơn trong việc tính toán kích thước phần tử, 
+    width và height sẽ bao gồm cả nội dung (content), padding và border.
+    */
+  box-sizing: border-box;
+}
+
+html {
+  /* Điều chỉnh font-size: 62.5% thì chúng ta quy đổi 1rem = 10px, thuận tiện cho việc tính toán 
+    theo kích thước chuẩn
+    */
+  font-size: 62.5%;
+}
+
+/* khôi phục lại cỡ chữ mặc định theo rem */
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* tạo nhóm dùng chung, để code những thuộc tính dùng chung cho cả web */
+a {
+  text-decoration: none; /* bỏ gạch chân */
+}
+
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0px 16px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+.main-content {
+  width: 1170px;
+  /* Xử lý trường hợp co web bị mất hình */
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* code cho class body là con của header */
+
+.header {
+  background-color: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+/* code cho thẻ a nằm trong khối nav */
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+}
+
+.nav li.active a,
+.nav a:hover {
+  /* font-weight: 600; */
+  color: #171100;
+  text-shadow: 1px 0px 0px currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+
+}
+
+.header .action{
+  margin-left: 49px;
+}
