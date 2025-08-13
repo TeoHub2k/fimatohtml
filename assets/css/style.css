@@ -23,7 +23,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* =========== common ============ */
+/* =============================================== common ================================================ */
 /* tạo nhóm dùng chung, để code những thuộc tính dùng chung cho cả web */
 a {
   text-decoration: none; /* bỏ gạch chân */
@@ -64,7 +64,25 @@ a {
   margin-right: auto;
 }
 
-/* code cho class body là con của header */
+/* rút gọn nội dung thành 1 dòng và chuyển sang ... */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* rút gọn nội dung thành 2 dòng và chuyển sang ... */
+.line-clamp.line-2 {
+  -webkit-line-clamp: var(--line-clamp, 2);
+}
+
+/* Ngăn chặn chữ dài không có cách làm vỡ giao diện */
+.break-all{
+  word-break: break-all;
+}
+
+/* ==================================== code cho class body là con của header ================================================*/
 
 .header {
   background-color: #fffcf4;
@@ -125,7 +143,7 @@ a {
   margin-left: 49px;
 }
 
-/* =============Code Hero============ */
+/* =============================Code Hero======================== */
 
 .hero {
   padding: 56px 0 65px;
@@ -289,7 +307,7 @@ a {
   margin-left: 28px;
 }
 
-/* Popular */
+/* ========================Popular==================================== */
 
 .popular {
   padding: 65px 0;
@@ -340,6 +358,7 @@ a {
 }
 
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
