@@ -77,8 +77,11 @@ a {
   -webkit-line-clamp: var(--line-clamp, 2);
 }
 
-/* Ngăn chặn chữ dài không có cách làm vỡ giao diện */
-.break-all{
+/* Ngăn chặn vỡ giao diện, dùng này khi:
+- Người dùng post 1 link quá dài 
+- Nội dung chữ dài không có dấu cách
+*/
+.break-all {
   word-break: break-all;
 }
 
